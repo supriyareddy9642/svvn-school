@@ -1,104 +1,119 @@
+
 .topbar {
-  position: absolute;
-  top: 0;
-  width: 100%;
   background: #c91414;
   color: #fff;
-  z-index: 50;
-  padding: 8px 0;
+  padding: 15px 0;
   font-size: 14px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 20;
 }
 
-/* FLEX CONTAINER */
-.topbar-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.left-info {
+  margin-left: 150px;
 }
 
-.left-info, .right-links {
-  display: flex;
-  gap: 12px;
-  align-items: center;
+.topbar .left-info i,
+.topbar .right-links i {
+  margin-right: 5px;
 }
 
-/* TEXT STYLING */
 .topbar .left-info span,
 .topbar .right-links a {
   font-size: 15px;
   font-weight: 400;
 }
 
-
 .topbar .right-links a {
   color: #fff;
+  margin-left: 10px;
   text-decoration: none;
 }
 
-.topbar .right-links a:hover {
-  text-decoration: underline;
-}
-
-/* ICONS */
 .topbar .right-links a svg,
 .left-info span svg {
   margin: 0 4px;
-  font-size: 16px;
+  font-size: 18px;
+  margin-top: -3px;
 }
 
-/* SEPARATOR */
-.line {
+.topbar .right-links span {
+  margin: 0 6px;
   opacity: 0.6;
 }
 
-/* ================= LARGE SCREENS ================= */
+.topbar a:hover {
+  text-decoration: underline;
+}
+
+/* ================= LARGE SCREENS (1920px+) ================= */
 @media (min-width: 1920px) {
+  .left-info {
+    margin-left: 250px; /* more spacing */
+  }
+
   .topbar .left-info span,
   .topbar .right-links a {
     font-size: 16px;
   }
 }
 
-/* ================= TABLET ================= */
+/* ================= TABLET (768px - 991px) ================= */
 @media (max-width: 991px) {
   .topbar {
     padding: 10px 0;
+  }
+
+  .left-info {
+    margin-left: 20px;
   }
 
   .topbar .left-info span,
   .topbar .right-links a {
     font-size: 13px;
   }
+
+  .topbar .right-links a {
+    margin-left: 6px;
+  }
 }
 
-/* ================= MOBILE ================= */
+/* ================= MOBILE (≤767px) ================= */
 @media (max-width: 767px) {
-  .topbar-inner {
+  .topbar {
+    text-align: center;
+    padding: 8px 10px;
+  }
+
+  /* Stack layout */
+  .topbar .container {
     flex-direction: column;
     align-items: center;
-    text-align: center;
   }
 
   .left-info {
+    margin-left: 0;
     margin-bottom: 5px;
   }
 
-  .right-links {
+  .topbar .right-links {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .right-links a {
+  .topbar .right-links a {
     margin: 4px 6px;
     font-size: 12px;
   }
 
-  .left-info span {
+  .topbar .left-info span {
     display: block;
     font-size: 12px;
   }
 
-  .line {
-    display: none;
+  .topbar .right-links span {
+    display: none; /* remove | separators */
   }
 }
