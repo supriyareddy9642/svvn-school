@@ -6,6 +6,7 @@
   overflow: hidden;
 }
 
+/* Overlay */
 .hero-slide::after {
   content: "";
   position: absolute;
@@ -19,113 +20,64 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  animation: zoomEffect 8s ease-in-out forwards;
 }
 
-/* Zoom Animation */
-@keyframes zoomEffect {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.2); }
-}
-
-/* Text */
+/* Text container */
 .banner-text {
   position: absolute;
-  top: 55%;
-  left: 40%;
-  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 10%; /* FIXED (was 40%) */
+  transform: translateY(-50%);
   text-align: left;
   color: #fff;
-  opacity: 0;
-  animation: fadeInText 2s ease-in-out forwards 1s;
   z-index: 2;
+  max-width: 600px;
 }
 
+/* Sub text */
 .banner-text span {
-  font-size: 20px;
+  font-size: 18px;
   font-style: italic;
   text-transform: uppercase;
-  display: inline-block;
 }
 
+/* Heading */
 .banner-text h2 {
-  font-size: 67px;
+  font-size: 55px; /* reduced slightly */
   font-weight: 600;
-  line-height: 100px;
-  letter-spacing: -2px;
-  margin-bottom: 27px;
+  line-height: 70px;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
 }
 
-/* Button */
-.banner-btn {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 13px 34px;
-  border-radius: 6px;
-  border: 2px solid red;
-  background-color: red;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* Text Animation */
-@keyframes fadeInText {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -60%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-}
-/* Wrapper ensures everything overlaps correctly */
-.hero-wrapper {
-  position: relative;
-}
-
-/* Remove gap from top */
-body {
-  margin: 0;
-}
-
-/* Fix carousel spacing issue */
-.carousel {
-  position: relative;
-}
+/* ================= LARGE SCREENS ================= */
 @media (min-width: 1920px) {
   .hero-slide {
     height: 850px;
   }
 
   .banner-text {
-    left: 35%;
+    left: 12%;
   }
 
   .banner-text h2 {
-    font-size: 80px;
-    line-height: 110px;
-  }
-
-  .banner-text span {
-    font-size: 22px;
+    font-size: 70px;
+    line-height: 90px;
   }
 }
 
-
-/* ================= TABLET (768px - 991px) ================= */
+/* ================= TABLET ================= */
 @media (max-width: 991px) {
   .hero-slide {
     height: 550px;
   }
 
   .banner-text {
-    top: 55%;
     left: 50%;
-    text-align: center;
+    top: 55%;
     transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 90%;
   }
 
   .banner-text span {
@@ -133,30 +85,23 @@ body {
   }
 
   .banner-text h2 {
-    font-size: 40px;
-    line-height: 55px;
-    letter-spacing: -1px;
-  }
-
-  .banner-btn {
-    padding: 10px 25px;
-    font-size: 14px;
+    font-size: 38px;
+    line-height: 50px;
   }
 }
 
-
-/* ================= MOBILE (≤767px) ================= */
+/* ================= MOBILE ================= */
 @media (max-width: 767px) {
   .hero-slide {
     height: 420px;
   }
 
   .banner-text {
-    top: 40%;
+    top: 45%;
     left: 50%;
-    text-align: center;
     transform: translate(-50%, -50%);
     width: 90%;
+    text-align: center;
   }
 
   .banner-text span {
@@ -164,13 +109,7 @@ body {
   }
 
   .banner-text h2 {
-    font-size: 26px;
-    line-height: 36px;
-    letter-spacing: 0;
-    margin-bottom: 15px;
+    font-size: 24px;
+    line-height: 34px;
   }
-
-  .banner-btn {
-    font-size: 13px;
-    padding: 8px 18px;
-  }
+}
