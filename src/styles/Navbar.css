@@ -1,56 +1,139 @@
-.custom-navbar {
-  position: absolute;
-  top: 40px;
+/* ================= EXISTING CODE (NO CHANGE) ================= */
+.navbar {
+  position: absolute !important;
   width: 100%;
-  z-index: 40;
+  z-index: 20;
+  top: 46px;
   background: transparent;
 }
 
-/* Logo */
 .my-logo {
-  height: 120px;
-  border-radius: 50%;
+  height: 130px;
+  border-radius: 100%;
+  box-shadow: 0 8px 30px rgba(20, 20, 30, 0.06);
   border: 6px solid #fff;
   margin-top: -40px;
 }
 
-/* Menu */
 .navbar a {
   color: #fff !important;
+  font-weight: 400;
   font-size: 16px;
 }
 
-/* Apply button */
+.nav-link {
+  padding: 0px 20px !important;
+}
+
+.navbar-nav {
+  margin-left: 70px;
+}
+
 .apply-btn {
-  border: 1px solid #fff;
-  padding: 6px 20px;
-  border-radius: 8px;
+  background: transparent;
+  border: 1px solid #ffffff69;
+  padding: 7px 25px;
+  border-radius: 9px;
 }
 
-/* Mobile call button */
-.mobile-call {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+
+/* ================= LARGE SCREENS (1920px+) ================= */
+@media (min-width: 1920px) {
+  .navbar-nav {
+    margin-left: 120px;
+  }
+
+  .nav-link {
+    padding: 0 25px !important;
+    font-size: 18px;
+  }
+
+  .my-logo {
+    height: 150px;
+  }
 }
 
-.mobile-call a {
-  background: red;
-  color: #fff;
-  padding: 5px 12px;
-  border-radius: 6px;
-  font-size: 13px;
-}
 
-/* Mobile */
+/* ================= TABLET (768px - 991px) ================= */
 @media (max-width: 991px) {
-  .custom-navbar {
-    position: absolute;
-    top: 35px;
+  .navbar {
+    top: 40px;
+    background: linear-gradient(45deg, #ff0000, #8b0000); /* slight bg for readability */
+    padding: 10px 0;
+  }
+
+  .navbar-nav {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .nav-link {
+    padding: 10px 0 !important;
+  }
+
+  .apply-btn {
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  .my-logo {
+    height: 90px;
+    margin-top: -20px;
+  }
+}
+
+
+/* ================= MOBILE (≤767px) ================= */
+@media (max-width: 767px) {
+  .navbar {
+    position: relative !important; /* prevent overlap */
+    top: 0;
+    background: linear-gradient(45deg, #ff0000, #8b0000); /* solid bg for mobile */
+    padding: 10px 0;
+  }
+
+  /* Center logo */
+  .navbar-brand {
+    margin: 0 auto;
   }
 
   .my-logo {
     height: 70px;
-    margin-top: -10px;
+    margin-top: 0;
+    border: 3px solid #fff;
   }
+
+  /* Menu alignment */
+  .navbar-nav {
+    margin-left: 0;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .nav-link {
+    padding: 10px 0 !important;
+    font-size: 14px;
+  }
+
+  /* Apply button */
+  .apply-btn {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  /* Fix toggler icon visibility */
+  .navbar-toggler {
+    border: 1px solid #fff !important;
+  }
+
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+  .navbar a {
+        margin-left: 0;
+}
+.apply-btn {
+       border: 1px solid #fff;
+}
 }
