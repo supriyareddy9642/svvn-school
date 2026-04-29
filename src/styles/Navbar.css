@@ -1,10 +1,11 @@
 /* ================= BASE NAVBAR ================= */
-.navbar {
-  position: relative !important; /* FIXED (was absolute) */
+.custom-navbar {
+  position: absolute;
+  top: 46px; /* same as before */
+  left: 0;
   width: 100%;
-  z-index: 20;
+  z-index: 30;
   background: transparent;
-  padding: 10px 0;
 }
 
 /* ================= LOGO ================= */
@@ -17,7 +18,7 @@
 }
 
 /* ================= NAV LINKS ================= */
-.navbar a {
+.custom-navbar a {
   color: #fff !important;
   font-weight: 400;
   font-size: 16px;
@@ -28,7 +29,7 @@
 }
 
 /* Center / spacing */
-.navbar-nav {
+.custom-navbar-nav {
   margin-left: auto;
   margin-right: auto;
 }
@@ -61,11 +62,11 @@
 
 /* ================= TABLET ================= */
 @media (max-width: 991px) {
-  .navbar {
+  .custom-navbar {
     background: linear-gradient(45deg, #ff0000, #8b0000);
   }
 
-  .navbar-nav {
+  .custom-navbar-nav {
     margin-left: 0;
     text-align: center;
   }
@@ -88,12 +89,12 @@
 
 /* ================= MOBILE ================= */
 @media (max-width: 767px) {
-  .navbar {
+  .custom-navbar {
     background: linear-gradient(45deg, #ff0000, #8b0000);
   }
 
   /* Center logo */
-  .navbar-brand {
+  .custom-navbar-brand {
     margin: 0 auto;
   }
 
@@ -104,7 +105,7 @@
   }
 
   /* Menu alignment */
-  .navbar-nav {
+  .custom-navbar-nav {
     margin-left: 0;
     text-align: center;
     padding-top: 10px;
@@ -124,11 +125,11 @@
   }
 
   /* Toggle icon fix */
-  .navbar-toggler {
+  .custom-navbar-toggler {
     border: 1px solid #fff !important;
   }
 
-  .navbar-toggler-icon {
+  .custom-navbar-toggler-icon {
     filter: invert(1);
   }
 }
