@@ -16,10 +16,11 @@ import Footer from "./components/Footer";
 export default function App() {
   return (
    
-      <div className="hero-wrapper">
-      <Topbar />
-      <CustomNavbar />
-      <Hero />
+      <div className="header-wrapper">
+  <Topbar />
+  <CustomNavbar />
+  <Hero />
+</div>
          <CardsSection />
           <AboutSection />
       <CounterSection />
@@ -30,7 +31,7 @@ export default function App() {
       <Testimonials />
       <Contact />
       <Footer />
-      </div>
+  
    
   );
 }
