@@ -1,11 +1,8 @@
 .topbar {
-  background: #c91414;
-  color: #fff;
-  padding: 12px 0;
-  font-size: 14px;
-  position: relative; /* FIXED (no overlap) */
+  position: absolute;
+  top: 0;
   width: 100%;
-  z-index: 20;
+  z-index: 40;
 }
 
 /* FLEX CONTAINER */
