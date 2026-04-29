@@ -5,7 +5,7 @@ import '../styles/Topbar.css';
 
 export default function Topbar() {
   return (
-    <div className="topbar d-none d-md-inline">
+    <div className="topbar d-none d-none d-md-block">
       <Container className="d-flex justify-content-between">
         
         <div className="left-info">

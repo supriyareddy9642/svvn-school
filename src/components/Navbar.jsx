@@ -33,7 +33,7 @@ export default function CustomNavbar() {
           </Nav>
 
           {/* Apply Button */}
-          <Link to="/apply" className="apply-btn ms-auto d-none d-md-inline">
+          <Link to="/apply" className="apply-btn ms-auto d-none d-md-block">
             Apply Now
           </Link>
 
