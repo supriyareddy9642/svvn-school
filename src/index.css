@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Rubik&display=swap');
-
+body {
+  padding-top: 120px;
+}
 * {
   font-family: "Rubik", sans-serif;
   font-size: 15px;
@@ -8,7 +10,9 @@
 .heading {
   font-family: "Libre Baskerville", serif;
 }
-
+.hero-section {
+  margin-top: 120px;
+}
 .line {
   color: #ffffff5c;
 }
