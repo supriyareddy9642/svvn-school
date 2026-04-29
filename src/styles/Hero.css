@@ -1,11 +1,13 @@
 /* Hero Slider */
 .hero-slide {
   height: 700px;
-  min-height: 400px;
   position: relative;
-  overflow: hidden;
 }
 
+/* IMPORTANT: add padding so content not hidden */
+.carousel {
+  margin-top: 0;
+}
 /* Overlay */
 .hero-slide::after {
   content: "";
