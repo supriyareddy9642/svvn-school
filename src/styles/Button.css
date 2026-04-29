@@ -1,0 +1,52 @@
+/* Base button */
+.custom-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 34px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+/* Icon */
+.btn-icon {
+  font-size: 12px;
+}
+
+/* 🔴 Primary (your banner-btn style) */
+.custom-btn.primary {
+  background: linear-gradient(45deg, #ff0000, #8b0000);
+  color: #fff;
+}
+
+.custom-btn.primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* ⚪ Secondary (apply-btn style) */
+.custom-btn.secondary {
+  background: #fff;
+  color: #c91414;
+}
+
+.custom-btn.secondary:hover {
+  background: #f5f5f5;
+}
+
+/* 🔲 Outline */
+.custom-btn.outline {
+  border: 2px solid #c91414;
+  color: #c91414;
+  background: transparent;
+}
+
+.custom-btn.outline:hover {
+  background: #c91414;
+  color: #fff;
+}

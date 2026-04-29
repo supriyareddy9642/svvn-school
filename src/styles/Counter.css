@@ -1,0 +1,85 @@
+/* counter */
+.counter-box {
+  padding: 15px 0;
+    background-image: url(../assets/red-book.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    width: 80%;
+    height: 148px;
+}
+.counter-box {
+  position: relative; /* REQUIRED for absolute children */
+}
+.counter-box svg{
+       font-size: 43px;
+    color: #fff;
+    position: absolute;
+    left: 40px;
+    top: 41px;
+
+}
+.counter {
+  font-size: 25px;
+    font-weight: bold;
+    display: inline-block;
+    color: #fff;
+    position: absolute;
+    top: 49px;
+    right: 44px;
+    font-family: "Libre Baskerville", serif;
+}
+.plus{
+           position: absolute;
+    right: 28px;
+    top: 49px;
+    color: #fff;
+    font-size: 23px;
+}
+.counter-title {
+  font-size: 18px;
+    /* margin-top: 5px; */
+    font-weight: 600;
+    /* position: absolute; */
+    /* bottom: -53px;
+    left: 37%; */
+  color: #101340;
+    text-align: center;
+    margin-top: 145px;
+     font-family: "Libre Baskerville", serif;
+}
+/* ================= MOBILE (≤767px) ================= */
+@media (max-width: 767px) {
+  .counter-box {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+
+  /* Icon */
+  .counter-box svg {
+    font-size: 28px;
+    left: 20px;
+    top: 35px;
+  }
+
+  /* Number */
+  .counter {
+    font-size: 18px;
+    top: 38px;
+    right: 30px;
+  }
+
+  /* Plus */
+  .plus {
+    right: 18px;
+    top: 38px;
+    font-size: 16px;
+  }
+
+  /* Title */
+  .counter-title {
+    font-size: 14px;
+    margin-top: 102px;
+  }
+}

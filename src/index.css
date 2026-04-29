@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Rubik&display=swap');
+
+* {
+  font-family: "Rubik", sans-serif;
+  font-size: 15px;
+}
+
+.heading {
+  font-family: "Libre Baskerville", serif;
+}
+
+.line {
+  color: #ffffff5c;
+}
+.section-padding{
+  padding:80px 0;
+}
+.gradient-text {
+    background: linear-gradient(45deg, #FF0000, #8B0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.white-bg{
+  background: #fff !important;
+}
+.black{
+  color:#000 !important;
+}
+@media (max-width: 767px) {
+.section-padding {
+    padding: 30px 0;
+}
+.section-gap {
+    padding: 30px 0;
+}
+.section-title h2, .section-title h2 span {
+    font-size: 37px;
+}
+}

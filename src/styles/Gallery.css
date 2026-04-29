@@ -1,0 +1,103 @@
+.gallery-area {
+  padding: 80px 0;
+}
+
+/* Filters */
+.filter-group {
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  border: none;
+  padding: 8px 18px;
+  margin: 5px;
+  border-radius: 20px;
+  background: #eee;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-btn.active {
+  background: #c91414;
+  color: #fff;
+}
+
+/* Masonry */
+.masonry-grid {
+  column-count: 3;
+  column-gap: 15px;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 15px;
+  transition: all 0.4s ease;
+}
+
+/* 🔥 Smooth filter animation */
+.masonry-item.hide {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+  height: 0;
+  margin: 0;
+}
+
+.masonry-item.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Card */
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-card img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+/* Hover zoom */
+.gallery-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.gallery-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Icon */
+.zoom-icon {
+  color: #fff;
+  font-size: 28px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 576px) {
+  .masonry-grid {
+    column-count: 1;
+  }
+}

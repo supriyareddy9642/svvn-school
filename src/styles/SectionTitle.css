@@ -1,0 +1,54 @@
+/* Wrapper */
+.section-title {
+  margin-bottom: 40px;
+}
+
+/* Top small heading */
+.top-head {
+  color: #c91414;
+    font-size: 17px !important;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Main heading */
+.heading {
+  font-size: 32px;
+  font-weight: 800;
+  position: relative;
+}
+
+.section-title h2, .section-title h2 span{
+    font-size: 59px;
+    font-weight: bold;
+    position: relative;
+    color: #101340;
+}
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(45deg, #ff0000, #8b0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Divider image */
+.devider {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+}
+
+/* Alignment */
+.text-center .devider {
+  left: 50%;
+  transform: translateX(-50%) !important;
+}
+
+.text-end .devider {
+  right: 0;
+  left: auto;
+}

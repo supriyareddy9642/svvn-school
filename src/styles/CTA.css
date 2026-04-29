@@ -1,0 +1,38 @@
+/* cta area */
+.cta-bg{
+    background-image: url(../assets/cta-banner.jpg);
+    background-size: cover;
+    padding: 65px 50px;
+    text-align: center;
+    color: #fff;
+    margin-top: -150px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.cta-bg h2{
+    font-size: 35px;
+    line-height: 58px;
+    margin-bottom: 7px;
+}
+.cta-bg p{
+    color:#fff;
+    font-size:19px;
+    margin-bottom:50px;
+}
+.cta-bg .apply-btn{
+        background: #fff;
+    color: #000;
+    padding: 15px 40px;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 767px) {
+.cta-bg {
+       padding: 35px 30px;
+}
+.cta-bg h2 {
+    font-size: 27px;
+    line-height: 48px;
+    margin-bottom: 7px;
+}
+}

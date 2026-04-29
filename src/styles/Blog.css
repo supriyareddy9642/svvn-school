@@ -1,0 +1,35 @@
+/* blogs area */
+.gray-bg{
+  background: #F6F4EE;
+}
+    .cards1 .custom-card .icon {
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+       
+    }
+    .cards1 .custom-card{
+    padding: 15px;
+    border-radius: 15px;
+    padding-bottom: 40px;
+    }
+    .cards1 .custom-card .arrow svg {
+    box-shadow: none;
+    border: 16px solid #f6f4ee;
+    width: 75px;
+    height: 75px;
+    top: 10px;
+}
+    .cards1 .custom-card .icon img {
+     border-radius: 15px;
+    }
+    .cards1 .custom-card h5 {
+        font-size:22px;
+        margin-bottom : 15px;
+    }
+    .cards1 .custom-card .arrow i{box-shadow:none;
+            border: 16px solid #f6f4ee;
+    width: 75px;
+    height: 75px;
+    top: 10px;}

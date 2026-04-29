@@ -1,0 +1,33 @@
+.academic-section{
+  background: #F6F4EE;
+  padding-bottom: 200px !important;
+}
+.section-gap {
+  padding: 80px 0;
+}
+
+.card{
+    padding: 15px;
+    background: #fff;
+    border: none !important;
+    border-radius: 15px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top{
+    overflow:hidden;
+    border-radius: 15px;
+}
+.card-img-top img{
+        width: 100%;
+    border-radius: 15px;
+    transition: 0.3s ease-out;
+}
+.card:hover .card-img-top img {
+    transform: scale(1.08);
+}
+.card-title{
+    font-size: 22px !important;
+    font-weight: 900 !important;
+    color: #101340 !important;
+}
