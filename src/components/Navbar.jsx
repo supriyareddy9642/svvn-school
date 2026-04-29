@@ -1,27 +1,26 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import '../styles/Navbar.css';
 import logo from "../assets/logo.jpg";
-import "../styles/Navbar.css";
 
 export default function CustomNavbar() {
   return (
-    <Navbar expand="lg" className="custom-navbar">
+    <Navbar expand="lg" className="navbar">
       <Container>
-
+        
         {/* Logo */}
         <Navbar.Brand as={Link} to="/">
-          <img src={logo} className="my-logo" />
+          <img src={logo} alt="logo" className="my-logo" />
         </Navbar.Brand>
+         <Link to="/apply" className="apply-btn ms-auto d-block d-md-none">
+            Call Now
+          </Link>
+        {/* Toggle */}
+        <Navbar.Toggle aria-controls="navbarNav" />
 
-        {/* Mobile center button */}
-        <div className="mobile-call d-lg-none">
-          <Link to="/apply">Call Now</Link>
-        </div>
-
-        <Navbar.Toggle />
-
-        <Navbar.Collapse>
-          <Nav className="mx-auto">
+        {/* Menu */}
+        <Navbar.Collapse id="navbarNav">
+          <Nav className="navbar-nav">
 
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/about">About</Nav.Link>
@@ -33,11 +32,12 @@ export default function CustomNavbar() {
 
           </Nav>
 
-          <Link to="/apply" className="apply-btn d-none d-lg-block">
+          {/* Apply Button */}
+          <Link to="/apply" className="apply-btn ms-auto d-none d-md-block">
             Apply Now
           </Link>
-        </Navbar.Collapse>
 
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );
