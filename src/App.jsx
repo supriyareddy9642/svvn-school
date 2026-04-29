@@ -15,8 +15,9 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-   
+    <>
       <div className="header-wrapper">
+       
   <Topbar />
   <CustomNavbar />
   <Hero />
@@ -31,7 +32,7 @@ export default function App() {
       <Testimonials />
       <Contact />
       <Footer />
-  
+  </>
    
   );
 }
