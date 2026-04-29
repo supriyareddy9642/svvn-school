@@ -2,7 +2,11 @@
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 40;
+  background: #c91414;
+  color: #fff;
+  z-index: 50;
+  padding: 8px 0;
+  font-size: 14px;
 }
 
 /* FLEX CONTAINER */
@@ -12,18 +16,10 @@
   align-items: center;
 }
 
-/* LEFT SIDE */
-.left-info {
+.left-info, .right-links {
   display: flex;
+  gap: 12px;
   align-items: center;
-  gap: 10px;
-}
-
-/* RIGHT SIDE */
-.right-links {
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 /* TEXT STYLING */
@@ -32,6 +28,7 @@
   font-size: 15px;
   font-weight: 400;
 }
+
 
 .topbar .right-links a {
   color: #fff;
