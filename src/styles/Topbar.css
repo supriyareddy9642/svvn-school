@@ -1,24 +1,35 @@
-/* ================= EXISTING CODE (NO CHANGE) ================= */
 .topbar {
   background: #c91414;
   color: #fff;
-  padding: 15px 0;
+  padding: 12px 0;
   font-size: 14px;
-  position: absolute;
+  position: relative; /* FIXED (no overlap) */
   width: 100%;
-  top: 0;
   z-index: 20;
 }
 
+/* FLEX CONTAINER */
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LEFT SIDE */
 .left-info {
-  margin-left: 150px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.topbar .left-info i,
-.topbar .right-links i {
-  margin-right: 5px;
+/* RIGHT SIDE */
+.right-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
+/* TEXT STYLING */
 .topbar .left-info span,
 .topbar .right-links a {
   font-size: 15px;
@@ -27,93 +38,73 @@
 
 .topbar .right-links a {
   color: #fff;
-  margin-left: 10px;
   text-decoration: none;
 }
 
-.topbar .right-links a svg,
-.left-info span svg {
-  margin: 0 4px;
-  font-size: 18px;
-  margin-top: -3px;
-}
-
-.topbar .right-links span {
-  margin: 0 6px;
-  opacity: 0.6;
-}
-
-.topbar a:hover {
+.topbar .right-links a:hover {
   text-decoration: underline;
 }
 
-/* ================= LARGE SCREENS (1920px+) ================= */
-@media (min-width: 1920px) {
-  .left-info {
-    margin-left: 250px; /* more spacing */
-  }
+/* ICONS */
+.topbar .right-links a svg,
+.left-info span svg {
+  margin: 0 4px;
+  font-size: 16px;
+}
 
+/* SEPARATOR */
+.line {
+  opacity: 0.6;
+}
+
+/* ================= LARGE SCREENS ================= */
+@media (min-width: 1920px) {
   .topbar .left-info span,
   .topbar .right-links a {
     font-size: 16px;
   }
 }
 
-/* ================= TABLET (768px - 991px) ================= */
+/* ================= TABLET ================= */
 @media (max-width: 991px) {
   .topbar {
     padding: 10px 0;
-  }
-
-  .left-info {
-    margin-left: 20px;
   }
 
   .topbar .left-info span,
   .topbar .right-links a {
     font-size: 13px;
   }
-
-  .topbar .right-links a {
-    margin-left: 6px;
-  }
 }
 
-/* ================= MOBILE (≤767px) ================= */
+/* ================= MOBILE ================= */
 @media (max-width: 767px) {
-  .topbar {
-    text-align: center;
-    padding: 8px 10px;
-  }
-
-  /* Stack layout */
-  .topbar .container {
+  .topbar-inner {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   .left-info {
-    margin-left: 0;
     margin-bottom: 5px;
   }
 
-  .topbar .right-links {
-    display: flex;
+  .right-links {
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .topbar .right-links a {
+  .right-links a {
     margin: 4px 6px;
     font-size: 12px;
   }
 
-  .topbar .left-info span {
+  .left-info span {
     display: block;
     font-size: 12px;
   }
 
-  .topbar .right-links span {
-    display: none; /* remove | separators */
+  .line {
+    display: none;
   }
 }
