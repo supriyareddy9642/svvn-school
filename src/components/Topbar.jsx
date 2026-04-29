@@ -1,3 +1,7 @@
+import { Container } from "react-bootstrap";
+import { FaEnvelope, FaUniversity, FaUserGraduate, FaCalendarAlt, FaBriefcase, FaPhoneAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import '../styles/Topbar.css';
 <div className="topbar">
   <Container className="d-flex justify-content-between align-items-center">
     
